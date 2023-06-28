@@ -63,27 +63,19 @@
                         <Image url="@../images/IconAutomat1panel.jpg" />
                      </image>
                   </ImageView>
-                  <RadioButton fx:id="msc1" layoutX="71.0" layoutY="26.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="115.0" text="1. Puste miejsce 0">
+                  <Button layoutX="354.0" layoutY="79.0" mnemonicParsing="false" onAction="#buyAction" text="Kup" />
+                  <RadioButton fx:id="msc1" layoutX="71.0" layoutY="26.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" wrapText="true">
                      <toggleGroup>
                         <ToggleGroup fx:id="numerPGroup" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton layoutX="206.0" layoutY="26.0" mnemonicParsing="false" text="2. Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="71.0" layoutY="56.0" mnemonicParsing="false" text="3. Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="206.0" layoutY="56.0" mnemonicParsing="false" text="4. Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="71.0" layoutY="106.0" mnemonicParsing="false" text="5. Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="206.0" layoutY="106.0" mnemonicParsing="false" text="6. Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="71.0" layoutY="136.0" mnemonicParsing="false" text="Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="206.0" layoutY="136.0" mnemonicParsing="false" text="Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="71.0" layoutY="181.0" mnemonicParsing="false" text="Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="206.0" layoutY="181.0" mnemonicParsing="false" text="Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="71.0" layoutY="211.0" mnemonicParsing="false" text="Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="206.0" layoutY="211.0" mnemonicParsing="false" text="Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="71.0" layoutY="250.0" mnemonicParsing="false" text="Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="206.0" layoutY="250.0" mnemonicParsing="false" text="Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="71.0" layoutY="280.0" mnemonicParsing="false" text="Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <RadioButton layoutX="206.0" layoutY="280.0" mnemonicParsing="false" text="16. Puste miejsce 0" toggleGroup="$numerPGroup" />
-                  <Button layoutX="354.0" layoutY="79.0" mnemonicParsing="false" onAction="#buyAction" text="Kup" />
+                  <RadioButton fx:id="msc2" layoutX="201.0" layoutY="26.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc3" layoutX="73.0" layoutY="103.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc4" layoutX="197.0" layoutY="103.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc5" layoutX="76.0" layoutY="175.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc6" layoutX="198.0" layoutY="175.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc7" layoutX="73.0" layoutY="251.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc8" layoutX="198.0" layoutY="251.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
                </children>
             </AnchorPane>
          </children>
