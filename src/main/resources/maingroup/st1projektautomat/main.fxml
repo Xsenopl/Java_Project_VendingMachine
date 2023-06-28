@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maingroup.st1projektautomat.MainController">
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maingroup.st1projektautomat.MainController">
    <children>
       <Button layoutX="71.0" layoutY="48.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Scena MainMenu" />
+      <ImageView fx:id="automat1" fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="48.0" onMouseClicked="#switchToMainMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/IconAutomat1.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
