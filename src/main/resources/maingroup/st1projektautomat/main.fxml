@@ -6,10 +6,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maingroup.st1projektautomat.MainController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maingroup.st1projektautomat.MainController">
    <children>
       <Button layoutX="71.0" layoutY="48.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Scena MainMenu" />
-      <ImageView fx:id="automat1" fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="48.0" onMouseClicked="#switchToMainMenu" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="automat1" fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="48.0" onMouseClicked="#switchToMainPanelAutomat" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/IconAutomat1.jpg" />
          </image>

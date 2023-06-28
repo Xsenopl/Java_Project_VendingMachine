@@ -12,5 +12,9 @@ public class MainController {
     private void switchToMainMenu() throws IOException {
         StartApplication.setRoot("main-menu");
     }
+    @FXML
+    private void switchToMainPanelAutomat() throws IOException {
+        StartApplication.setRoot("panel-automat");
+    }
 
 }

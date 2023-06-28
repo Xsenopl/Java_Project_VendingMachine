@@ -13,7 +13,7 @@ public class StartApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource("main-menu.fxml"));
-        scene = new Scene(loadFXML("main-menu"),500, 300);
+        scene = new Scene(loadFXML("main-menu"),700, 500);
         stage.setTitle("Automat");
         stage.setScene(scene);
         stage.show();
