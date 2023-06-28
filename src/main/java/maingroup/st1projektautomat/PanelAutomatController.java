@@ -74,7 +74,7 @@ public class PanelAutomatController implements Initializable {
 
         if (controller.buyProduct(choose)) {
             infoLabel.setText("Zakupiłeś towar!");
-        } else System.out.println("Coś poszło nie tak i nie kupiłes towaru.");
+        } else System.out.println("Coś poszło nie tak i nie kupiłeś towaru.");
 
         numerPGroup.selectToggle(null);
         payment.setText("");
