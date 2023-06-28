@@ -2,8 +2,9 @@ package maingroup.st1projektautomat.backend;
 
 public interface iAutomatControllerInterface {
 
-    void test();
 
+    boolean buyProduct(int nr);
+    double getProductPrice(int nr);
 
-
+    boolean nrTest(int nr);
 }

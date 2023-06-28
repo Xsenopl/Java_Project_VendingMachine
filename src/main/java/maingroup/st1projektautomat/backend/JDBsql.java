@@ -73,6 +73,18 @@ public class JDBsql implements iJDBsqlInterface {
         closeDB(connection);
         return tabtemp;
     }
+    public void buy1(Produkt towar){
+        try {
+            connection = DriverManager.getConnection(url, username, password);
+            PreparedStatement prepStmt = connection.prepareStatement("Update towary set ilosc = ? WHERE nr_na_liscie = ? ;");
+            prepStmt.setInt(1, towar.getIlosc());
+            prepStmt.setInt(2, towar.getNr_na_liscie());
+            prepStmt.execute();
+        }catch (SQLException e){
+            System.out.println("Wyj (przeniesienieDo): " + e);
+        }
+        closeDB(connection);
+    }
 
 
 

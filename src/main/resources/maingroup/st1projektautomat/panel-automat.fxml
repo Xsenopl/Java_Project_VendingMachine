@@ -7,6 +7,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -76,6 +77,7 @@
                   <RadioButton fx:id="msc6" layoutX="198.0" layoutY="175.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
                   <RadioButton fx:id="msc7" layoutX="73.0" layoutY="251.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
                   <RadioButton fx:id="msc8" layoutX="198.0" layoutY="251.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <TextField fx:id="payment" layoutX="353.0" layoutY="37.0" prefHeight="32.0" prefWidth="43.0" promptText="0.0 zł" />
                </children>
             </AnchorPane>
          </children>

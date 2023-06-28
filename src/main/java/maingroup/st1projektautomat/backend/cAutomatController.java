@@ -6,7 +6,20 @@ public class cAutomatController implements iAutomatControllerInterface{
     public cAutomatController(cAutomat a){ automat = a; }
 
     @Override
-    public void test() {
-        automat.test();
+    public boolean nrTest(int nr) {
+        return (automat.checkNrMscNULL(nr) && automat.checkNrMscZero(nr));
     }
+
+    @Override
+    public boolean buyProduct(int nr) {
+       return automat.buy(nr);
+    }
+
+    @Override
+    public double getProductPrice(int nr) {
+        return automat.priceOfProduct(nr);
+
+    }
+
+
 }

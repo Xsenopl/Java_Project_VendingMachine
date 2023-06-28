@@ -7,4 +7,5 @@ public interface iJDBsqlInterface {
     void closeDB(Connection con);
     void wyswietlDane(ResultSet rs);
     Produkt[] fromDBtoTab(int l);
+    void buy1(Produkt towar);
 }
