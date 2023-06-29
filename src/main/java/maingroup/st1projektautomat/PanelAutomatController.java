@@ -1,5 +1,7 @@
 package maingroup.st1projektautomat;
 
+import javafx.animation.PauseTransition;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -11,11 +13,17 @@ import maingroup.st1projektautomat.backend.cAutomatController;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
+
+import static java.lang.Thread.sleep;
 
 public class PanelAutomatController implements Initializable {
 
     cAutomatController controller = StartApplication.controller1;
+    private List<Produkt> localList = new ArrayList();
     private int choose;
     @FXML private TextField payment;
     @FXML private ToggleGroup numerPGroup;
@@ -30,14 +38,19 @@ public class PanelAutomatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        numerPGroup.getToggles().forEach(toggle -> {
+        final int[] i = {0};
+        updateLocalList();
+        numerPGroup.getToggles().forEach( toggle -> {
             RadioButton radioButton = (RadioButton) toggle;
-            radioButton.setText("Towar");
+            updateRadioButtonText(radioButton, i[0]);
+            i[0] = i[0] +1;
         });
+
+
+
         numerPGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 RadioButton selectedRadioButton = (RadioButton) newValue;
-                selectedRadioButton.setText("Numer " + numerPGroup.getToggles().indexOf(selectedRadioButton));
                 choose = numerPGroup.getToggles().indexOf(selectedRadioButton);
             }
         });
@@ -59,15 +72,18 @@ public class PanelAutomatController implements Initializable {
 
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("puste lub brak");
+            informLabel(infoLabel, "W tym miejscu nie ma towaru.", 5000);
             numerPGroup.selectToggle(null);
             return;
         } catch (NumberFormatException e) {
             System.out.println("Nie można było przekonwertować zapłaty na double" + e);
+            informLabel(infoLabel, "Musisz użyć gotówki do zapłaty", 5000);
             numerPGroup.selectToggle(null);
             return;
         }
         if (money < controller.getProductPrice(choose)) {
             moneyLabel.setText("brakło Ci pieniędzy");
+            informLabel(infoLabel, "Kwota niewystarczająca", 5000);
             numerPGroup.selectToggle(null);
             return;
         }
@@ -76,11 +92,40 @@ public class PanelAutomatController implements Initializable {
             infoLabel.setText("Zakupiłeś towar!");
         } else System.out.println("Coś poszło nie tak i nie kupiłeś towaru.");
 
+
+        updateRadioButtonText((RadioButton) numerPGroup.getSelectedToggle(), choose);
         numerPGroup.selectToggle(null);
         payment.setText("");
     }
 
 
+    private void informLabel(Label label, String text, int time) {
+        label.setText(text);
+        // Tworzy nowy wątek
+        new Thread(() -> {
+            try {
+                sleep(time); // Czekaj 5 sekund
+                Platform.runLater(() -> label.setText("Informacje o sytuacji")); // Zmiana tekstu w wątku JavaFX
+            } catch (InterruptedException e) {
+                System.out.println("Błąd w nowym wątku"+ e); //e.printStackTrace()
+            }
+        }).start();
+    }
+    private boolean updateRadioButtonText(RadioButton radioButton, int i){
+        try{
+            if (localList.get(i) == null) {
+                radioButton.setText(i + ".\nPuste");
+            } else {
+                radioButton.setText(localList.get(i).getNr_na_liscie() + ". \n" + localList.get(i).getNazwa() + " " + localList.get(i).getCena() + "zł \n[" + localList.get(i).getIlosc() + "]");
+            }
+        }catch (Exception e){
+            System.out.println("Nie udało się zmienić wartości RadioButtona"); return false;
+        }
+        return true;
+    }
+    private void updateLocalList(){
+        localList.addAll(Arrays.asList(controller.getAutomatTab()));
+    }
     private void selectProduct(Produkt produkt) {
         System.out.println("Wybrano produkt: " + produkt.getNazwa());
     }

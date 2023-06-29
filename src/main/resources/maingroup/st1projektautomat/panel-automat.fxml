@@ -19,7 +19,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maingroup.st1projektautomat.PanelAutomatController">
    <children>
       <MenuBar>
@@ -65,18 +64,18 @@
                      </image>
                   </ImageView>
                   <Button layoutX="354.0" layoutY="79.0" mnemonicParsing="false" onAction="#buyAction" text="Kup" />
-                  <RadioButton fx:id="msc1" layoutX="71.0" layoutY="26.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" wrapText="true">
+                  <RadioButton fx:id="msc1" layoutX="73.0" layoutY="26.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" wrapText="true">
                      <toggleGroup>
                         <ToggleGroup fx:id="numerPGroup" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="msc2" layoutX="201.0" layoutY="26.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc2" layoutX="198.0" layoutY="26.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
                   <RadioButton fx:id="msc3" layoutX="73.0" layoutY="103.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
-                  <RadioButton fx:id="msc4" layoutX="197.0" layoutY="103.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
-                  <RadioButton fx:id="msc5" layoutX="76.0" layoutY="175.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc4" layoutX="198.0" layoutY="103.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc5" layoutX="73.0" layoutY="175.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
                   <RadioButton fx:id="msc6" layoutX="198.0" layoutY="175.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
-                  <RadioButton fx:id="msc7" layoutX="73.0" layoutY="251.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
-                  <RadioButton fx:id="msc8" layoutX="198.0" layoutY="251.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc7" layoutX="73.0" layoutY="247.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
+                  <RadioButton fx:id="msc8" layoutX="198.0" layoutY="247.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
                   <TextField fx:id="payment" layoutX="353.0" layoutY="37.0" prefHeight="32.0" prefWidth="43.0" promptText="0.0 zł" />
                </children>
             </AnchorPane>

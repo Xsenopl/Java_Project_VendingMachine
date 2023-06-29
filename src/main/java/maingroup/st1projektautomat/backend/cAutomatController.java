@@ -18,8 +18,9 @@ public class cAutomatController implements iAutomatControllerInterface{
     @Override
     public double getProductPrice(int nr) {
         return automat.priceOfProduct(nr);
-
     }
-
+    public Produkt[] getAutomatTab(){
+        return automat.getProdukty();
+    }
 
 }

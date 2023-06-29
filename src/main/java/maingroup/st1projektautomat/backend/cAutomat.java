@@ -39,6 +39,8 @@ public class cAutomat extends JDBsql{
     public double priceOfProduct(int nr){
         return produkty[nr].getCena();
     }
+
+    public Produkt[] getProdukty() { return produkty; }
     public boolean checkNrMscNULL(int msc) throws ArrayIndexOutOfBoundsException{ return produkty[msc] != null;}            //Zwraca true, jeśli miejsce nie jest puste
     public boolean checkNrMscZero(int msc) throws ArrayIndexOutOfBoundsException{  return produkty[msc].getIlosc() != 0;}   //Zwraca true, jeśli miejsce posiada ilość != 0
 }
