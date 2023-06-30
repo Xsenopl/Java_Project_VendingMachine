@@ -60,7 +60,7 @@ public class PanelAutomatController implements Initializable {
 
     @FXML
     private void switchToMain() throws IOException {
-        StartApplication.setRoot("panel-service");
+        StartApplication.setRoot("main");
     }
     @FXML
     private void buyAction() {
@@ -155,9 +155,7 @@ public class PanelAutomatController implements Initializable {
     private void updateLocalList(){
         localList.addAll(Arrays.asList(controller.getAutomatTab()));
     }
-    private void selectProduct(Produkt produkt) {
-        System.out.println("Wybrano produkt: " + produkt.getNazwa());
-    }
+    @FXML void closeApp(){ Platform.exit(); }
 }
 
 

@@ -34,5 +34,9 @@ public class cAutomatController implements iAutomatControllerInterface{
     public List<Produkt> getAutomatDB(){
         return automat.fromDbAllToList();
     }
+    public boolean deleteFromBase(int id){
+        return automat.deleteFromBase(id);
+    }
+
 
 }

@@ -16,7 +16,5 @@ public class MainMenuController {
         StartApplication.setRoot("main");
     }
 
-    @FXML void closeApp(){
-        Platform.exit();
-    }
+    @FXML void closeApp(){ Platform.exit(); }
 }

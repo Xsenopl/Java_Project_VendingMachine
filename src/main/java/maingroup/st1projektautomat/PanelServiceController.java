@@ -1,5 +1,6 @@
 package maingroup.st1projektautomat;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -89,7 +90,15 @@ public class PanelServiceController implements Initializable {
     @FXML public void akcja3(){
 
     }
-    @FXML public void akcja4(){
+    @FXML public void deleteDB(){
+        Produkt p =  tabOfProducts.getSelectionModel().getSelectedItem();
+        if( controller.deleteFromBase(p.getId()) )
+        {
+            lab2.setText("Pomyślnie usunięto z bazy " + p.getId()+". "+ p.getNazwa());
+        }
+        else lab2.setText("Nie udało się usunąć z bazy" + p.getId()+". "+ p.getNazwa());
+
+        tabOfProducts.getItems().remove(p);
 
     }
     @FXML public void showFromList(){
@@ -99,6 +108,8 @@ public class PanelServiceController implements Initializable {
         lab1.setText("Produkt: "+ p.toString(true));
   //    lab1.setText( tabOfProducts.getSelectionModel().getSelectedItem().getNazwa());
 
+
+      //  updateLocalList();
     }
     private void updateLocalList(List<Produkt> listaa){
  //       localDBList.addAll(Arrays.asList(controller.getAutomatTab()));
@@ -108,5 +119,5 @@ public class PanelServiceController implements Initializable {
     private void switchToAutomatPanel() throws IOException {
         StartApplication.setRoot("panel-automat");
     }
-
+    @FXML void closeApp(){ Platform.exit(); }
 }

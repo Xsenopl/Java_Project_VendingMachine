@@ -1,5 +1,6 @@
 package maingroup.st1projektautomat;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 
@@ -16,5 +17,6 @@ public class MainController {
     private void switchToMainPanelAutomat() throws IOException {
         StartApplication.setRoot("panel-automat");
     }
+    @FXML void closeApp(){ Platform.exit(); }
 
 }

@@ -7,7 +7,6 @@ public class cAutomat extends JDBsql{
     private Produkt[] produkty = new Produkt[large];
 
     public cAutomat() {
-        super();
         this.money = 100;
 
         produkty = fromDBtoTab(large);
@@ -32,8 +31,16 @@ public class cAutomat extends JDBsql{
 
 
 
+    @Override
+    public boolean deleteFromBase(int id){
+        boolean result = super.deleteFromBase(id);
 
-
+       if( result) {
+           produkty = fromDBtoTab(large);
+            return true;
+       }
+        return false;
+    }
 
 
     public double priceOfProduct(int nr){

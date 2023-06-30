@@ -107,6 +107,21 @@ public class JDBsql implements iJDBsqlInterface {
         return listtemp;
     }
 
+    public boolean deleteFromBase(int id){
+        try {
+            connection = DriverManager.getConnection(url, username, password);
+            PreparedStatement prepStmt = connection.prepareStatement("Delete from produkty where id = ? ;");
+            prepStmt.setInt(1, id);
+            prepStmt.execute();
+            closeDB(connection);
+            return true;
+        }catch (SQLException e){
+            System.out.println("Wyj (usunięcieZ): " + e);
+        }
+        closeDB(connection);
+        return false;
+    }
+
 
 
 
