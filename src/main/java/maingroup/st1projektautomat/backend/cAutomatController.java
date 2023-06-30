@@ -1,5 +1,8 @@
 package maingroup.st1projektautomat.backend;
 
+import java.util.List;
+import java.util.Objects;
+
 public class cAutomatController implements iAutomatControllerInterface{
 
     private cAutomat automat;
@@ -11,6 +14,11 @@ public class cAutomatController implements iAutomatControllerInterface{
     }
 
     @Override
+    public boolean logIn(String writePass) {
+        return Objects.equals(writePass, automat.getPassword());
+    }
+
+    @Override
     public boolean buyProduct(int nr) {
        return automat.buy(nr);
     }
@@ -19,8 +27,12 @@ public class cAutomatController implements iAutomatControllerInterface{
     public double getProductPrice(int nr) {
         return automat.priceOfProduct(nr);
     }
+    @Override
     public Produkt[] getAutomatTab(){
         return automat.getProdukty();
+    }
+    public List<Produkt> getAutomatDB(){
+        return automat.fromDbAllToList();
     }
 
 }

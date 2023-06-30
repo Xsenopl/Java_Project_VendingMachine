@@ -95,7 +95,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" text="Jestem serwisantem" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#showPassPrompt" text="Jestem serwisantem" GridPane.columnIndex="1" />
                   <Button mnemonicParsing="false" onAction="#switchToMain" text="&lt; Wstecz" />
                </children>
             </GridPane>

@@ -4,10 +4,10 @@ import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import maingroup.st1projektautomat.backend.Produkt;
 import maingroup.st1projektautomat.backend.cAutomatController;
 
@@ -60,7 +60,7 @@ public class PanelAutomatController implements Initializable {
 
     @FXML
     private void switchToMain() throws IOException {
-        StartApplication.setRoot("main");
+        StartApplication.setRoot("panel-service");
     }
     @FXML
     private void buyAction() {
@@ -99,6 +99,35 @@ public class PanelAutomatController implements Initializable {
     }
 
 
+
+
+    @FXML
+    private void showPassPrompt() throws RuntimeException{
+  //      PasswordField passwordField = new PasswordField();  // Ukywa znaki
+        TextInputDialog dialog = new TextInputDialog();
+
+
+        dialog.setTitle("Podaj hasło");
+        dialog.setHeaderText("Wpisz hasło:");
+        dialog.setContentText("Hasło:");
+
+        dialog.showAndWait().ifPresent(password -> {
+
+            if(controller.logIn(password)){
+                System.out.println("Poprawne hasło");
+                try {
+                    StartApplication.setRoot("panel-service");
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            else {
+                System.out.println("Błędne hasło. Porpawne to qwe123");
+            }
+        });
+
+
+    }
     private void informLabel(Label label, String text, int time) {
         label.setText(text);
         // Tworzy nowy wątek

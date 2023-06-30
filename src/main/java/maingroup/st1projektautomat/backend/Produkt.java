@@ -1,5 +1,7 @@
 package maingroup.st1projektautomat.backend;
 
+import javafx.beans.property.SimpleStringProperty;
+
 public class Produkt {
     private Integer id;
     private Integer nr_na_liscie;
@@ -13,6 +15,15 @@ public class Produkt {
         this.nazwa = nazwa;
         this.cena = cena;
         this.ilosc = ilosc;
+    }
+
+
+    public String toString(boolean t)       // true, kiedy jest na liście automatu, false go jej nie ma
+    {
+        if(!t)
+            return (id +". "+ nazwa);
+        else
+            return (id +". "+ nazwa +" nr "+ nr_na_liscie +" "+ cena +"zł ["+ ilosc +"]");
     }
 
     public Integer getId()              { return id; }
