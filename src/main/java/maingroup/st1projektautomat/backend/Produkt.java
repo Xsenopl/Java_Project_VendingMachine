@@ -1,7 +1,5 @@
 package maingroup.st1projektautomat.backend;
 
-import javafx.beans.property.SimpleStringProperty;
-
 public class Produkt {
     private Integer id;
     private Integer nr_na_liscie;

@@ -33,19 +33,13 @@ public class PanelServiceController implements Initializable {
     @FXML private TableColumn<Object, Object> col_ilosc;
     @FXML private Label lab1, lab2;
 
-
-
-    Produkt p1 = new Produkt(0,10, "prod1", 1.20, 3);
-    Produkt p2 = new Produkt(1,11, "prod2", 1.70, 5);
-    Produkt p3 = new Produkt(2,12, "prod3", 10.0, 0);
-
-
-
-
+//    //Produkty dla celów testowych
+//    Produkt p1 = new Produkt(0,10, "prod1", 1.20, 3);
+//    Produkt p2 = new Produkt(1,11, "prod2", 1.70, 5);
+//    Produkt p3 = new Produkt(2,12, "prod3", 10.0, 0);
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-   //     updateLocalList();
 
         col_id.setCellValueFactory(                new PropertyValueFactory<>("id"));
         col_nazwa.setCellValueFactory(                new PropertyValueFactory<>("nazwa"));
@@ -55,15 +49,7 @@ public class PanelServiceController implements Initializable {
 
         ObservableList<Produkt> lista= FXCollections.observableArrayList();
 
-
         updateLocalList(lista);
-
-
-     //   updateLocalList();
-
- //       lista.add(p1);
- //       lista.add(p2);
- //       lista.add(p3);
 
         tabOfProducts.getItems().addAll(lista);
 
@@ -107,9 +93,6 @@ public class PanelServiceController implements Initializable {
             lab1.setText("Produkt: " + p.toString(false));
         lab1.setText("Produkt: "+ p.toString(true));
   //    lab1.setText( tabOfProducts.getSelectionModel().getSelectedItem().getNazwa());
-
-
-      //  updateLocalList();
     }
     private void updateLocalList(List<Produkt> listaa){
  //       localDBList.addAll(Arrays.asList(controller.getAutomatTab()));

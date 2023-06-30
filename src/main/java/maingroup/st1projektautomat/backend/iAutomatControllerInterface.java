@@ -12,4 +12,6 @@ public interface iAutomatControllerInterface {
 
     boolean nrTest(int nr);
     boolean logIn(String writePass);
+    boolean deleteFromBase(int id);
+
 }

@@ -46,8 +46,6 @@ public class PanelAutomatController implements Initializable {
             i[0] = i[0] +1;
         });
 
-
-
         numerPGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 RadioButton selectedRadioButton = (RadioButton) newValue;
@@ -56,7 +54,6 @@ public class PanelAutomatController implements Initializable {
         });
 
     }
-
 
     @FXML
     private void switchToMain() throws IOException {
@@ -82,7 +79,7 @@ public class PanelAutomatController implements Initializable {
             return;
         }
         if (money < controller.getProductPrice(choose)) {
-            moneyLabel.setText("brakło Ci pieniędzy");
+      //      moneyLabel.setText("--");
             informLabel(infoLabel, "Kwota niewystarczająca", 5000);
             numerPGroup.selectToggle(null);
             return;
@@ -97,9 +94,6 @@ public class PanelAutomatController implements Initializable {
         numerPGroup.selectToggle(null);
         payment.setText("");
     }
-
-
-
 
     @FXML
     private void showPassPrompt() throws RuntimeException{
@@ -163,7 +157,7 @@ public class PanelAutomatController implements Initializable {
 
 
 /*
-        //W kontekście wyboru RadioButtona
+        //W kontekście wyboru RadioButtona pozostało dla szybkiego dostępu
         if(numerPGroup.getSelectedToggle() ==msc1)
         infoLabel.setText("Kup: towar");
         else

@@ -10,7 +10,6 @@ public class cAutomat extends JDBsql{
         this.money = 100;
 
         produkty = fromDBtoTab(large);
-//        System.out.println(produkty[6].toString());
     }
 
     public boolean buy(int nr) {
@@ -26,10 +25,6 @@ public class cAutomat extends JDBsql{
         buy1(produkty[nr]);
         return true;
     }
-
-
-
-
 
     @Override
     public boolean deleteFromBase(int id){

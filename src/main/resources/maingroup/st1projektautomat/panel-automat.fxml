@@ -44,9 +44,15 @@
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="440.0" prefWidth="217.0">
                <children>
-                  <Label prefHeight="92.0" prefWidth="201.0" text="Automat stoi przed tobą. Możesz coś kupić odeść lub jeśli jesteś serwisantem, zmodyfikować jego zawartość." textAlignment="CENTER" wrapText="true" />
-                  <Label fx:id="moneyLabel" prefHeight="17.0" prefWidth="246.0" text="Posiadasz pieniędzy: 0.0 zł" />
-                  <Label fx:id="infoLabel" prefHeight="17.0" prefWidth="241.0" text="Label">
+                  <Label prefHeight="123.0" prefWidth="201.0" text="Automat stoi przed tobą. Możesz coś kupić odeść lub jeśli jesteś serwisantem, zmodyfikować jego zawartość." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="moneyLabel" prefHeight="17.0" prefWidth="246.0" text="-----">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="infoLabel" prefHeight="17.0" prefWidth="241.0" text="Informacje o stanie">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -63,7 +69,10 @@
                         <Image url="@../images/IconAutomat1panel.jpg" />
                      </image>
                   </ImageView>
-                  <Button layoutX="354.0" layoutY="79.0" mnemonicParsing="false" onAction="#buyAction" text="Kup" />
+                  <Button layoutX="349.0" layoutY="75.0" mnemonicParsing="false" onAction="#buyAction" prefHeight="38.0" prefWidth="49.0" text="Kup">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
                   <RadioButton fx:id="msc1" layoutX="73.0" layoutY="26.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" wrapText="true">
                      <toggleGroup>
                         <ToggleGroup fx:id="numerPGroup" />
@@ -76,7 +85,7 @@
                   <RadioButton fx:id="msc6" layoutX="198.0" layoutY="175.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
                   <RadioButton fx:id="msc7" layoutX="73.0" layoutY="247.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
                   <RadioButton fx:id="msc8" layoutX="198.0" layoutY="247.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" text="1. Puste miejsce 0" toggleGroup="$numerPGroup" wrapText="true" />
-                  <TextField fx:id="payment" layoutX="353.0" layoutY="37.0" prefHeight="32.0" prefWidth="43.0" promptText="0.0 zł" />
+                  <TextField fx:id="payment" layoutX="347.0" layoutY="37.0" prefHeight="32.0" prefWidth="55.0" promptText="0.0 zł" />
                </children>
             </AnchorPane>
          </children>
